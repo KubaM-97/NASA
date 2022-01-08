@@ -1,5 +1,5 @@
 <template>
-  <p>Hello Locon !!!</p>
+  <p class='text-center'>Hello Locon !!!</p>
 </template>
 
 <script>
