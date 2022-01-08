@@ -6,11 +6,13 @@
 </template>
 
 <script>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
+import { useStore } from 'vuex';
 
 export default {
   name: 'SelectDate',
   setup(){
+    const store = useStore();
 
     const today = ref(new Date())
     const date = ref('')
@@ -29,6 +31,10 @@ export default {
     
     onMounted(()=>{
       formatDate()
+    })
+
+    watch(date, (val) => {
+      store.commit('setSelectedDate', val)
     })
 
     return {
