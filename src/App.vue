@@ -1,12 +1,14 @@
 <template>
-  <p class='text-center'>Hello Locon !!!</p>
+  <ConfigPanelView />
 </template>
 
 <script>
+import ConfigPanelView from '@/views/ConfigPanelView'
 
 export default {
   name: 'App',
   components: {
+    ConfigPanelView,
   }
 }
 </script>
