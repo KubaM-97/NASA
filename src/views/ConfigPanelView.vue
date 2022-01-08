@@ -1,7 +1,9 @@
 <template>
-  <NumberOfImages />
-  <SelectDate />
-  <SubmitButton />
+  <div class='text-center mt-3 mt-md-5 d-flex justify-content-center align-items-end'>
+    <NumberOfImages />
+    <SelectDate />
+    <SubmitButton />
+  </div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <p>Submit Button</p>
+  <button class="btn btn-primary btn-sm">Submit</button>
 </template>
 
 <script>
