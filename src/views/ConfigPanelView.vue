@@ -3,7 +3,7 @@
     class="text-center mt-3 mt-md-5"
   >
     <div class="container">
-      <div class="row offset-md-2 d-flex align-items-end">
+      <div class="row offset-md-1 d-flex align-items-end">
         <NumberOfImages />
         <SelectDate />
         <SubmitButton />
