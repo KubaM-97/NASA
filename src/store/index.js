@@ -24,11 +24,11 @@ export default createStore({
     },
     actions: {
         fetchPhotos( { state, commit } ) {
-            const { selectedDate, apiKey } = state;
+            const { numberOfImages, selectedDate, apiKey } = state;
             axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${selectedDate}&api_key=${apiKey}`,
             )
             .then(response => {
-                commit("setPhotos", response.data.photos)
+                commit("setPhotos", response.data.photos.slice(0, numberOfImages))
             })
             
         }
