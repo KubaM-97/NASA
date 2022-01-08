@@ -1,19 +1,31 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <GallerySingleImage v-for="photo in photos" :key="photo.id" :photo="photo"/>
+    <div class="container">
+        <LightGallery
+            :settings="{ speed: 500, plugins: plugins }"
+            class="row"
+        >
+            <GallerySingleImage v-for="photo in photos" :key="photo.id" :photo="photo"/>
+        </LightGallery>
     </div>
-  </div>
+    
 </template>
 
 <script>
-import GallerySingleImage from '@/components/gallery/GallerySingleImage';
+import LightGallery from 'lightgallery/vue'
+import lgZoom from 'lightgallery/plugins/zoom'
+import lgVideo from 'lightgallery/plugins/video'
+
+import GallerySingleImage from '@/components/gallery/GallerySingleImage'
 
 export default {
   name: 'GalleryImages',
   components: {
+    LightGallery,
     GallerySingleImage,
   },
+  data: () => ({
+    plugins: [lgZoom, lgVideo],
+  }),
   props: {
     photos: {
       type: Array,
@@ -25,4 +37,7 @@ export default {
 </script>
 
 <style>
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-zoom.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.0.0-beta.4/css/lg-video.css');
 </style>
