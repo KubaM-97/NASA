@@ -1,13 +1,16 @@
 <template>
+  <LogoView />
   <ConfigPanelView />
 </template>
 
 <script>
+import LogoView from '@/views/LogoView'
 import ConfigPanelView from '@/views/ConfigPanelView'
 
 export default {
   name: 'App',
   components: {
+    LogoView,
     ConfigPanelView,
   }
 }
