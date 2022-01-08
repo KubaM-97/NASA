@@ -12,6 +12,11 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.google.com/specimen/Space+Grotesk');
 #app {
 }
+p{
+  font-family: 'Space Grotesk', sans-serif;
+}
 </style>
+
