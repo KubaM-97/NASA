@@ -1,6 +1,6 @@
 # NASA
 <img src="public/favicon.ico" alt="Logo" title="Logo" width="200px" />
-## Locon - zadanie rekrutacyjne
+Locon - zadanie rekrutacyjne
 
 ## Project setup
 ```
