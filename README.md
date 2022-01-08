@@ -1,4 +1,4 @@
-# nasa3
+# nasa-locon
 
 ## Project setup
 ```
