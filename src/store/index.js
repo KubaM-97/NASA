@@ -17,6 +17,8 @@ export default createStore({
         }
     },
     actions: {
-        
+        fetchPhotos( { state } ) {
+            console.log(state.numberOfImages, state.selectedDate);
+        }
     },
 })
