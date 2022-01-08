@@ -1,5 +1,5 @@
 <template>
-  <div class='text-center mt-3 mt-md-5 d-flex justify-content-center align-items-end'>
+  <div class='form-group text-center mt-3 mt-md-5 d-flex justify-content-center align-items-end'>
     <NumberOfImages />
     <SelectDate />
     <SubmitButton />

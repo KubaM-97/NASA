@@ -1,7 +1,7 @@
 <template>
-  <div class='mx-2'>
+  <div class='form-group mx-2'>
     <label for='numberOfImages' class='mb-2 d-block'>Number of images:</label>
-    <input id='numberOfImages' type='number' v-model.number='numberOfImages' class='d-block pl-2' />
+    <input id='numberOfImages' type='number' v-model.number='numberOfImages' class='form-control d-block pl-2' />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class='mx-2'>
+  <div class='form-group mx-2'>
     <label for='selectDate' class='mb-2 d-block'>Select date:</label>
-    <input id='selectDate' type='date'  v-model="date" :max='date' class='d-block pl-2' />
+    <input id='selectDate' type='date' v-model="date" :max='date' class='form-control d-block pl-2' />
   </div>
 </template>
 
