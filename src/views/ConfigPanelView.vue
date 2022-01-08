@@ -1,8 +1,14 @@
 <template>
-  <form @submit.prevent="submitForm" class='text-center mt-3 mt-md-5 d-flex justify-content-center align-items-end'>
-    <NumberOfImages />
-    <SelectDate />
-    <SubmitButton />
+  <form @submit.prevent="submitForm"
+    class="text-center mt-3 mt-md-5"
+  >
+    <div class="container">
+      <div class="row offset-md-2 d-flex align-items-end">
+        <NumberOfImages />
+        <SelectDate />
+        <SubmitButton />
+      </div>
+    </div>
   </form>
 </template>
 
