@@ -1,6 +1,6 @@
 <template>
-  <div class='form-group mx-2'>
-    <label for='numberOfImages' class='mb-2 d-block'>Number of images:</label>
+  <div class='form-group mx-md-2 my-3 col-md-4'>
+    <label for='numberOfImages' class='mb-md-2 d-block'>Number of images:</label>
     <input id='numberOfImages' type='number' v-model.number.lazy='numberOfImages' class='form-control d-block pl-2' />
   </div>
 </template>
