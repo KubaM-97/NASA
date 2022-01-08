@@ -13,7 +13,7 @@
 <script>
 import LightGallery from 'lightgallery/vue'
 import lgZoom from 'lightgallery/plugins/zoom'
-import lgVideo from 'lightgallery/plugins/video'
+import lgThumbanail from 'lightgallery/plugins/thumbnail'
 
 import GallerySingleImage from '@/components/gallery/GallerySingleImage'
 
@@ -24,7 +24,7 @@ export default {
     GallerySingleImage,
   },
   data: () => ({
-    plugins: [lgZoom, lgVideo],
+    plugins: [lgZoom, lgThumbanail],
   }),
   props: {
     photos: {

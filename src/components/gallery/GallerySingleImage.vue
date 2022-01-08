@@ -29,4 +29,22 @@ export default {
 </script>
 
 <style>
+.lg-thumb {
+  margin: 10px auto;
+}
+.lg-thumb-item{
+  border: 2px solid rgba(158, 160, 80, 0.8);
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  opacity: .7;
+}
+.lg-thumb-item:hover{
+  border: 2px solid rgb(233, 235, 104);
+  cursor: pointer;
+  opacity: 1;
+}
+img{
+  height: 100%
+}
 </style>
