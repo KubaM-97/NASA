@@ -1,6 +1,5 @@
 <template>
-    <p>Gallery Images</p>
-    <GallerySingleImage />
+  <GallerySingleImage v-for="photo in photos" :key="photo.id" :photo="photo"/>
 </template>
 
 <script>
@@ -10,6 +9,13 @@ export default {
   name: "GalleryImages",
   components: {
     GallerySingleImage,
+  },
+  props: {
+    photos: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
   },
 };
 </script>
