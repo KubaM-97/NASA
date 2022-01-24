@@ -23,14 +23,23 @@ export default createStore({
         }
     },
     actions: {
-        fetchPhotos( { state, commit } ) {
+        async fetchPhotos( { state, commit } ) {
+
             const { numberOfImages, selectedDate, apiKey } = state;
-            axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${selectedDate}&api_key=${apiKey}`,
-            )
-            .then(response => {
-                commit("setPhotos", response.data.photos.slice(0, numberOfImages))
-            })
-            
+            const limitPerPage = 25;
+            const howManyPages = Math.ceil(numberOfImages / limitPerPage);
+            const fetchedPhotos = [];
+
+            commit("setPhotos", []);
+
+            for( let i = 0; i < howManyPages; i++ ) {
+                await axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${selectedDate}?&page=${i}&api_key=${apiKey}`,
+                ).then( response => fetchedPhotos.push( response.data.photos.slice(0, numberOfImages - limitPerPage * i)))
+            }
+
+            commit("setPhotos", fetchedPhotos.flat());
+
         }
     },
+
 })
